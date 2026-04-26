@@ -1,0 +1,5 @@
+Una derivada parcial mide cómo cambia una función cuando varías una de sus variables y dejas las demás fijas. Si tienes $f(x, y) = x^2 + 3y$, la derivada parcial respecto a $x$ es $2x$ (tratando a $y$ como constante), y respecto a $y$ es $3$ (tratando a $x$ como constante). Se escriben con la $\partial$ en lugar de la $d$ normal: $\frac{\partial f}{\partial x}$ y $\frac{\partial f}{\partial y}$.
+
+En redes neuronales aparecen en todas partes. Cuando queremos saber cómo afecta un peso concreto al coste, la pregunta exacta es "si muevo este peso un poquito y dejo todos los demás iguales, ¿cuánto cambia el coste?". Eso es exactamente $\frac{\partial C}{\partial w}$. Una red tiene cientos de miles de pesos, y cada uno tiene su propia derivada parcial respecto al coste. El conjunto de todas esas derivadas parciales se llama gradiente, y es lo que [[CON-gradient descent|gradient descent]] usa para actualizar la red.
+
+Ver [[NN-07 Backpropagation]] para cómo se calculan en cadena a través de las capas.
